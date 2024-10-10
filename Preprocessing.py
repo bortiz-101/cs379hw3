@@ -12,7 +12,14 @@ mba_data = pd.read_csv(data)
 # Drop rows with missing target (admission) values
 mba_data.dropna(subset=['admission'], inplace=True)
 
-# Encoding the categorical columns and scaling numeric columns
+# Fill missing values in categorical columns without chained assignment
+mba_data['race'] = mba_data['race'].fillna('Unknown')
+
+# Define features and target
+X = mba_data.drop(columns=['application_id', 'admission'])
+y = mba_data['admission']
+
+# Identify categorical and numerical features
 categorical_features = ['gender', 'international', 'major', 'race', 'work_industry']
 numerical_features = ['gpa', 'gmat', 'work_exp']
 
@@ -22,10 +29,6 @@ preprocessor = ColumnTransformer(
         ('num', StandardScaler(), numerical_features),
         ('cat', OneHotEncoder(), categorical_features)
     ])
-
-# Split data into features (X) and target (y)
-X = mba_data.drop(columns=['application_id', 'admission'])
-y = mba_data['admission']
 
 # Split data into training (70%), development (15%), and test (15%) sets
 X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
@@ -57,4 +60,9 @@ y_train.to_csv('y_train.csv', index=False)
 y_dev.to_csv('y_dev.csv', index=False)
 y_test.to_csv('y_test.csv', index=False)
 
+# Print confirmation and shapes of processed datasets
 print("Datasets saved successfully.")
+print("Shapes of processed datasets:")
+print("Training set:", X_train_df.shape)
+print("Development set:", X_dev_df.shape)
+print("Test set:", X_test_df.shape)
