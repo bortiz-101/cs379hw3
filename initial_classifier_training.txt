@@ -1,0 +1,8 @@
+"C:\Users\User\OneDrive - Loyola University Chicago\COMP379\cs379hw3\venv\Scripts\python.exe" "C:\Users\User\OneDrive - Loyola University Chicago\COMP379\cs379hw3\InitialClassifier.py"
+
+Overall Survival Rate on Training Data: 0.39
+
+F1 Score on Training Data: 0.73
+F1 Score on Development Data: 0.67
+
+Process finished with exit code 0

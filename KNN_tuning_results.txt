@@ -1,0 +1,10 @@
+K=1: F1 Score on Development Set: 0.69
+K=2: F1 Score on Development Set: 0.69
+K=3: F1 Score on Development Set: 0.74
+K=4: F1 Score on Development Set: 0.73
+K=5: F1 Score on Development Set: 0.72
+K=6: F1 Score on Development Set: 0.73
+K=7: F1 Score on Development Set: 0.74
+K=8: F1 Score on Development Set: 0.76
+K=9: F1 Score on Development Set: 0.76
+K=10: F1 Score on Development Set: 0.75
