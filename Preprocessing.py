@@ -5,7 +5,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
 # Load the dataset
-data = "MBA.csv"  # Replace with the path to your local dataset
+data = "MBA.csv"
 mba_data = pd.read_csv(data)
 
 # Separate rows with and without admission status
@@ -17,7 +17,7 @@ known_admission_data.loc[:, 'race'] = known_admission_data['race'].fillna('Unkno
 unknown_admission_data.loc[:, 'race'] = unknown_admission_data['race'].fillna('Unknown')
 
 # Map 'admission' column to numerical values
-admission_mapping = {'Admit': 1, 'Waitlist': 0.5, 'Deny': 0}  # You can customize this as needed
+admission_mapping = {'Admit': 1, 'Waitlist': 0.5, 'Deny': 0}
 known_admission_data.loc[:, 'admission'] = known_admission_data['admission'].map(admission_mapping)
 
 # Define features and target for known admission data
