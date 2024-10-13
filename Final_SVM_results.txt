@@ -1,0 +1,7 @@
+
+Overall Survival Rate on Training Data: 0.39
+
+Overall Survival Rate on Test Data: 0.35
+
+F1 Score on Training Data: 0.77
+F1 Score on Test Data: 0.78

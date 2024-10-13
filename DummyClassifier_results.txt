@@ -1,0 +1,4 @@
+Strategy: stratified, F1 Score: 0.43
+Strategy: most_frequent, F1 Score: 0.00
+Strategy: stratified, F1 Score: 0.37
+Strategy: most_frequent, F1 Score: 0.00
